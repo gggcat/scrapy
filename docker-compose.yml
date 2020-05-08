@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  devel:
+    #image: zzzcat/dispshell:latest
+    container_name: scrapy
+    build:
+      context: .
+      dockerfile: scrapy.Dockerfile
+    volumes:
+      - .:/work/:rw
+    working_dir: /work/
+    tty: true
+    environment: 
+      PYTHONDONTWRITEBYTECODE: 1
+
+  splash:
+    image: scrapinghub/splash
+    #command: --disable-lua-sandbox
+    command: --disable-private-mode
+    ports:
+      - 8050:8050
