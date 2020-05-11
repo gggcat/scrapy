@@ -40,5 +40,5 @@ RUN pip install --upgrade pip && \
 # RUN: need override
 #
 COPY entrypoint.sh .
-ENTRYPOINT ["bash", "entrypoint.sh"]
+ENTRYPOINT ["bash", "/work-scrapy/entrypoint.sh"]
 CMD ["bash"]
