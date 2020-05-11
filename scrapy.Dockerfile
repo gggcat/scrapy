@@ -1,6 +1,6 @@
 FROM zzzcat/dispshell:latest
 
-WORKDIR /work
+WORKDIR /work-scrapy
 
 #
 # Scrapy
